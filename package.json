@@ -1,6 +1,6 @@
 {
   "name": "napi-demo",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "main": "index.js",
   "types": "index.d.ts",
   "napi": {
@@ -34,5 +34,15 @@
     "test": "ava",
     "universal": "napi universal",
     "version": "napi version"
+  },
+  "optionalDependencies": {
+    "napi-demo-win32-x64-msvc": "0.0.1",
+    "napi-demo-darwin-x64": "0.0.1",
+    "napi-demo-linux-x64-gnu": "0.0.1",
+    "napi-demo-darwin-arm64": "0.0.1",
+    "napi-demo-android-arm64": "0.0.1",
+    "napi-demo-linux-arm64-gnu": "0.0.1",
+    "napi-demo-linux-arm64-musl": "0.0.1",
+    "napi-demo-win32-arm64-msvc": "0.0.1"
   }
 }
