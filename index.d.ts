@@ -21,6 +21,7 @@ export interface Pet {
   kind: number
 }
 export declare function printPet(pet: Pet): void
+export declare function callThreadsafeFunction(callback: (err: null | Error, result: number) => void): void
 export declare class Animal {
   name: string
   age: number

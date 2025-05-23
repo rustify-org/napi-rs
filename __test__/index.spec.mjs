@@ -1,6 +1,6 @@
 import test from 'ava'
 
-import { sum, hello, Animal, coolFunction, highOrderFunction, getEnv, Kind, sayA, getSum, Dog, Cat, printPet, sayHi, sayHi2 } from '../index.js'
+import { sum, hello, Animal, coolFunction, highOrderFunction, getEnv, Kind, sayA, getSum, Dog, Cat, printPet, sayHi, sayHi2, callThreadsafeFunction } from '../index.js'
 
 test('sum from native', (t) => {
   t.is(sum(1, 2), 3)
@@ -81,4 +81,14 @@ test('sayHi2 from native', (t) => {
   t.is(sayHi2((a) => {
     console.log(a)
   }, 'demo'), undefined)
+})
+
+test('callThreadsafeFunction from native', (t) => {
+  t.is(callThreadsafeFunction((err, result) => {
+    if (err) {
+      console.log({ m: err.message, c: err.code })
+    } else {
+      console.log(result)
+    }
+  }), undefined)
 })
