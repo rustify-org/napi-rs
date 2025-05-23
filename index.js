@@ -310,7 +310,7 @@ if (!nativeBinding) {
   throw new Error(`Failed to load native binding`)
 }
 
-const { Kind, coolFunction, Animal, sum, hello, highOrderFunction, getEnv, sayA, getSum, Dog, Cat } = nativeBinding
+const { Kind, coolFunction, Animal, sum, hello, highOrderFunction, getEnv, sayA, getSum, Dog, Cat, printPet } = nativeBinding
 
 module.exports.Kind = Kind
 module.exports.coolFunction = coolFunction
@@ -323,3 +323,4 @@ module.exports.sayA = sayA
 module.exports.getSum = getSum
 module.exports.Dog = Dog
 module.exports.Cat = Cat
+module.exports.printPet = printPet

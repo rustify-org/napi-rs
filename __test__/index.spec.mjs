@@ -1,6 +1,6 @@
 import test from 'ava'
 
-import { sum, hello, Animal, coolFunction, highOrderFunction, getEnv, Kind, sayA, getSum, Dog, Cat } from '../index.js'
+import { sum, hello, Animal, coolFunction, highOrderFunction, getEnv, Kind, sayA, getSum, Dog, Cat, printPet } from '../index.js'
 
 test('sum from native', (t) => {
   t.is(sum(1, 2), 3)
@@ -66,3 +66,7 @@ test('Cat from native say name', (t) => {
   t.is(cat.sayName(), 'cat')
 })
 
+test('printPet from native', (t) => {
+  const pet = { name: 'dog', kind: 1 }
+  t.is(printPet(pet), undefined)
+})
