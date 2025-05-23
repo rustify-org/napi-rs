@@ -1,6 +1,6 @@
 import test from 'ava'
 
-import { sum, hello, Animal, coolFunction, highOrderFunction, getEnv, Kind, sayA, getSum, Dog, Cat, printPet, sayHi, sayHi2, callThreadsafeFunction } from '../index.js'
+import { sum, hello, Animal, coolFunction, highOrderFunction, getEnv, Kind, sayA, getSum, Dog, Cat, printPet, sayHi, sayHi2, callThreadsafeFunction, errorFunc } from '../index.js'
 
 test('sum from native', (t) => {
   t.is(sum(1, 2), 3)
@@ -91,4 +91,9 @@ test('callThreadsafeFunction from native', (t) => {
       console.log(result)
     }
   }), undefined)
+})
+
+test('errorFunc from native', (t) => {
+  const err = t.throws(() => errorFunc(2))
+  t.is(err.message, '参数不可以为偶数：i=2')
 })
