@@ -15,5 +15,5 @@ where
   F: Fn(String) -> napi::Result<()>,
 {
   let r = f("fuzhiqiang".to_string());
-  println!("r: {:?}", r);
+  println!("Executed callback with demo: {}", demo);
 }

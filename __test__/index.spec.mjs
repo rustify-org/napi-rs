@@ -1,6 +1,6 @@
 import test from 'ava'
 
-import { sum, hello, Animal, coolFunction, highOrderFunction, getEnv, Kind, sayA, getSum, Dog, Cat, printPet, sayHi } from '../index.js'
+import { sum, hello, Animal, coolFunction, highOrderFunction, getEnv, Kind, sayA, getSum, Dog, Cat, printPet, sayHi, sayHi2 } from '../index.js'
 
 test('sum from native', (t) => {
   t.is(sum(1, 2), 3)
@@ -75,4 +75,10 @@ test('sayHi from native', (t) => {
   t.is(sayHi((a) => {
     console.log(a)
   }), undefined)
+})
+
+test('sayHi2 from native', (t) => {
+  t.is(sayHi2((a) => {
+    console.log(a)
+  }, 'demo'), undefined)
 })
