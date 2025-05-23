@@ -9,6 +9,9 @@ export const enum Kind {
   Dog = 'Dog',
   Cat = 'Cat'
 }
+export declare function coolFunction(kind: Kind): string
+export declare function highOrderFunction(aArg: number, callback: (s: number)=>string): number
+export declare function getEnv(env: string): string | null
 export declare class Animal {
   name: string
   age: number
