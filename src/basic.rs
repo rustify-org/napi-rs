@@ -59,7 +59,10 @@ pub fn get_env(env: String) -> Option<String> {
 
 #[napi]
 pub fn say_a(s: Option<bool>) -> Result<bool> {
-  s.ok_or_else(|| napi::Error::new(napi::Status::GenericFailure, "s is None"))
+  match s {
+    Some(v) => Ok(v),
+    None => Err(napi::Error::new(napi::Status::GenericFailure, "s is None")),
+  }
 }
 
 #[napi]

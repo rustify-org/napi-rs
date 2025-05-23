@@ -27,4 +27,5 @@ export declare class Dog {
 export declare class Cat {
   name: string
   constructor(name: string)
+  static create(name: string): Cat
 }

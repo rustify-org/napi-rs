@@ -1,6 +1,6 @@
 import test from 'ava'
 
-import { sum, hello, Animal, coolFunction, highOrderFunction, getEnv, Kind } from '../index.js'
+import { sum, hello, Animal, coolFunction, highOrderFunction, getEnv, Kind, sayA, getSum, Dog, Cat } from '../index.js'
 
 test('sum from native', (t) => {
   t.is(sum(1, 2), 3)
@@ -29,4 +29,26 @@ test('highOrderFunction from native', (t) => {
 
 test('getEnv from native', (t) => {
   t.is(getEnv('USER'), 'olive')
+})
+
+test('sayA from native', (t) => {
+  t.is(sayA(true), true)
+  t.is(sayA(false), false)
+
+  const err = t.throws(() => sayA(null))
+  t.is(err.message, 's is None')
+})
+
+test('getSum from native', (t) => {
+  t.is(getSum([1, 2, 3]), 6)
+})
+
+test('Dog from native', (t) => {
+  const dog = new Dog('dog')
+  t.is(dog.name, 'dog')
+})
+
+test('Cat from native', (t) => {
+  const cat = Cat.create('cat')
+  t.is(cat.name, 'cat')
 })

@@ -18,4 +18,9 @@ impl Cat {
   pub fn new(name: String) -> Self {
     Cat { name }
   }
+  // static修饰符
+  #[napi(factory)]
+  pub fn create(name: String) -> Self {
+    Cat { name }
+  }
 }
