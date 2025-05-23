@@ -52,3 +52,17 @@ test('Cat from native', (t) => {
   const cat = Cat.create('cat')
   t.is(cat.name, 'cat')
 })
+
+test('Cat from native set name', (t) => {
+  const cat = new Cat('cat')
+  t.is(cat.name, 'cat')
+  cat.setName('dog')
+  t.is(cat.name, 'dog')
+  t.is(cat.getName(), 'dog')
+})
+
+test('Cat from native say name', (t) => {
+  const cat = new Cat('cat')
+  t.is(cat.sayName(), 'cat')
+})
+
