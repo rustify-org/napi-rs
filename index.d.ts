@@ -20,3 +20,11 @@ export declare class Animal {
   constructor(name: string, age: number)
   changeName(newName: string): void
 }
+export declare class Dog {
+  name: string
+  constructor(name: string)
+}
+export declare class Cat {
+  name: string
+  constructor(name: string)
+}
