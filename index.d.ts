@@ -28,4 +28,7 @@ export declare class Cat {
   name: string
   constructor(name: string)
   static create(name: string): Cat
+  sayName(): string
+  setName(newName: string): void
+  getName(): string
 }

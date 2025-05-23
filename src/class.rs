@@ -23,4 +23,16 @@ impl Cat {
   pub fn create(name: String) -> Self {
     Cat { name }
   }
+  #[napi]
+  pub fn say_name(&self) -> String {
+    self.name.clone()
+  }
+  #[napi]
+  pub fn set_name(&mut self, new_name: String) {
+    self.name = new_name;
+  }
+  #[napi]
+  pub fn get_name(&self) -> String {
+    self.name.clone()
+  }
 }
