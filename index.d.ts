@@ -14,6 +14,8 @@ export declare function highOrderFunction(aArg: number, callback: (s: number)=>s
 export declare function getEnv(env: string): string | null
 export declare function sayA(s?: boolean | undefined | null): boolean
 export declare function getSum(nums: Array<number>): number
+export declare function sayHi(f: (msg: string)=>void): void
+export declare function sayHi2(f: (msg: string)=>void, demo: string): void
 export interface Pet {
   name: string
   kind: number
