@@ -1,6 +1,6 @@
 import test from 'ava'
 
-import { sum, hello, Animal, coolFunction, highOrderFunction, getEnv, Kind, sayA, getSum, Dog, Cat, printPet, sayHi, sayHi2, callThreadsafeFunction, errorFunc, asyncFibTask } from '../index.js'
+import { sum, hello, Animal, coolFunction, highOrderFunction, getEnv, Kind, sayA, getSum, Dog, Cat, printPet, sayHi, sayHi2, callThreadsafeFunction, errorFunc, asyncFibTask, asyncFib } from '../index.js'
 
 test('sum from native', (t) => {
   t.is(sum(1, 2), 3)
@@ -101,3 +101,4 @@ test('errorFunc from native', (t) => {
 test('asyncFib from native', async (t) => {
   t.is(await asyncFibTask(10), 55)
 })
+

@@ -310,9 +310,10 @@ if (!nativeBinding) {
   throw new Error(`Failed to load native binding`)
 }
 
-const { asyncFibTask, Kind, coolFunction, Animal, sum, hello, highOrderFunction, getEnv, sayA, getSum, Dog, Cat, sayHi, sayHi2, printPet, callThreadsafeFunction, errorFunc } = nativeBinding
+const { asyncFibTask, asyncFib, Kind, coolFunction, Animal, sum, hello, highOrderFunction, getEnv, sayA, getSum, Dog, Cat, sayHi, sayHi2, printPet, callThreadsafeFunction, errorFunc } = nativeBinding
 
 module.exports.asyncFibTask = asyncFibTask
+module.exports.asyncFib = asyncFib
 module.exports.Kind = Kind
 module.exports.coolFunction = coolFunction
 module.exports.Animal = Animal

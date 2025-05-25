@@ -1,4 +1,7 @@
-use napi::{bindgen_prelude::AsyncTask, Error, JsFunction, JsNumber, Result, Task};
+use napi::{
+  bindgen_prelude::{AbortSignal, AsyncTask},
+  Error, JsFunction, JsNumber, Result, Task,
+};
 use napi_derive::napi;
 
 struct AsyncFib {
@@ -32,4 +35,9 @@ impl Task for AsyncFib {
 #[napi]
 fn async_fib_task(input: u32) -> AsyncTask<AsyncFib> {
   AsyncTask::new(AsyncFib { input })
+}
+
+#[napi]
+fn async_fib(input: u32, signal: AbortSignal) -> AsyncTask<AsyncFib> {
+  AsyncTask::with_signal(AsyncFib { input }, signal)
 }
